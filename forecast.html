@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderful Weather Widget - 5-Day Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-container">
+        <!-- Navigation -->
+        <nav class="weather-nav">
+            <a href="index.html" class="nav-link">Today</a>
+            <a href="forecast.html" class="nav-link active">5-Day Forecast</a>
+        </nav>
+
+        <!-- City Input -->
+        <div class="city-input-container">
+            <input type="text" id="cityInput" placeholder="Enter city name..." value="Salt Lake City">
+            <button id="searchBtn">🔍 Search</button>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading-container" style="display: none;">
+            <div class="weather-spinner">☀️</div>
+            <p>Fetching forecast data...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error" class="error-message" style="display: none;"></div>
+
+        <!-- Forecast Display -->
+        <div id="forecastContainer" class="forecast-container" style="display: none;">
+            <h1 id="cityName" class="city-name"></h1>
+            <div class="forecast-subtitle">5-Day Weather Forecast</div>
+            
+            <div id="forecastCards" class="forecast-cards">
+                <!-- Forecast cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/config.js"></script>
+    <script src="scripts/forecast.js"></script>
+</body>
+</html>
